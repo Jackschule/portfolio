@@ -1,31 +1,37 @@
+/* ===== BODY: der gesamte sichtbare Seitenbereich ===== */
 body{
-    background-color: green;
-    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
-  
-}
-.obenanfang{
-  background-color: rgba(0, 0, 0, 0.3);
-  backdrop-filter: blur(10px);
-  border-radius: 16px;
-  width: 90%;
-  height: 125px;
-  justify-content: center;
-  flex-direction: column;
-  margin: 0 auto;
-  align-items: center;
-  display: flex;
-}
-.kasten-reihe {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
-  margin-top: 40px;
-  justify-content: center;
-  margin-left: 100px;   /* schiebt das ganze Raster nach rechts */
+    background-color: green;   /* Hintergrundfarbe der ganzen Seite */
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;  /* Schriftart für den gesamten Text */
 }
 
+/* ===== OBENANFANG: die Box ganz oben mit "willkommen" ===== */
+.obenanfang{
+  height: 125px;
+  background-color: rgba(0, 0, 0, 0.3);  /* Schwarz mit 30% Deckkraft -> wirkt transparent/dunkler als der grüne Hintergrund */
+  backdrop-filter: blur(10px);            /* verwischt alles, was hinter der Box liegt (Glas-Effekt) */
+  border-radius: 16px;                    /* rundet alle vier Ecken der Box ab */
+  width: 90%;                             /* Box ist 90% so breit wie ihr übergeordnetes Element (hier: body) */
+  height: 125px;                          /* feste Höhe der Box */
+  justify-content: center;                /* zentriert den Inhalt vertikal in der Box (wirkt wegen display: flex unten) */
+  flex-direction: column;                 /* Inhalt wird untereinander angeordnet */
+  margin: 0 auto;                         /* oben/unten kein Abstand, links/rechts automatisch -> zentriert die Box horizontal */
+  align-items: center;                    /* zentriert den Inhalt horizontal in der Box */
+  display: flex;                          /* macht die Box zum Flex-Container, damit die obigen Regeln greifen */
+}
+
+/* ===== KASTEN-REIHE: der Container, der die 4 Kästen zusammenhält ===== */
+.kasten-reihe {
+  display: grid;                          /* macht diesen Bereich zu einem Grid (Raster-Layout) */
+  grid-template-columns: 1fr 1fr;         /* erstellt 2 gleich breite Spalten -> je 2 Kästen nebeneinander, 2 Zeilen automatisch */
+  gap: 20px;                              /* Abstand zwischen den Kästen, horizontal und vertikal */
+  margin-top: 40px;                       /* Abstand zwischen dieser Reihe und der Box darüber (.obenanfang) */
+  justify-content: center;                /* zentriert das Raster horizontal innerhalb seines Elternelements */
+  margin-left: 150px;                     /* schiebt das gesamte Raster zusätzlich um 300px nach rechts */
+}
+
+/* ===== KASTEN: die einzelnen roten Boxen (4 Stück) ===== */
 .kasten{
-  background-color: rgb(52, 0, 0);
-  height: 150px;
-  width: 200px;
+  background-color: rgba(52, 0, 0, 0.8);  /* 50% transparent */
+  height: 250px;                          /* Höhe jedes einzelnen Kastens */
+  width: 400px;                           /* Breite jedes einzelnen Kastens */
 }
