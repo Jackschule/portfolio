@@ -1,12 +1,11 @@
 /* ===== BODY: der gesamte sichtbare Seitenbereich ===== */
 body{
     background-color: green;   /* Hintergrundfarbe der ganzen Seite */
-    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;  /* Schriftart für den gesamten Text */
-}
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
 
 /* ===== OBENANFANG: die Box ganz oben mit "willkommen" ===== */
 .obenanfang{
-  height: 125px;
   background-color: rgba(0, 0, 0, 0.3);  /* Schwarz mit 30% Deckkraft -> wirkt transparent/dunkler als der grüne Hintergrund */
   backdrop-filter: blur(10px);            /* verwischt alles, was hinter der Box liegt (Glas-Effekt) */
   border-radius: 16px;                    /* rundet alle vier Ecken der Box ab */
@@ -33,5 +32,8 @@ body{
 .kasten{
   background-color: rgba(52, 0, 0, 0.8);  /* 50% transparent */
   height: 250px;                          /* Höhe jedes einzelnen Kastens */
-  width: 400px;                           /* Breite jedes einzelnen Kastens */
+  width: 400px;
+  color: gray;  
+  font-family: sans-serif;                         /* Breite jedes einzelnen Kastens */
+  padding: 10px;
 }
